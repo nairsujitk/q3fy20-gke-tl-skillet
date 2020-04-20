@@ -140,7 +140,7 @@ resource "kubernetes_pod" "postgress_pod" {
         name = "POSTGRES_USER"
         value = "admin"
         name = "POSTGRES_PASSWORD"
-        value = "admin" 
+        value = "admin123" 
       }
 
       port {
