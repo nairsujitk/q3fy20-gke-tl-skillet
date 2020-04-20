@@ -4,7 +4,7 @@
 name: Deploying GKE cluster with Microservices APP and Twistlock Console and Defender for Demo
 
 # label should be a human readable label that conveys what this skillet will do
-label: gke
+label: gke q3skillet
 
 # description is a longer more informative version of a label
 description: Deploying GKE cluster with Microservices APP and Twistlock Console and Defender for Demo
