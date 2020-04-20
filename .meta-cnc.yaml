@@ -28,10 +28,10 @@ labels:
 # the terraform binary as '--var' options, thus overriding any tfvars entries.
 # Variable names MUST match the names of the defined terraform variables
 variables:
-  - name: cred_file_name
-    description: Path/Filename of the Google service account credential file
-    default: 
-    type_hint: Path/Filename of the Google service account credential file
+#  - name: cred_file_name
+#    description: Path/Filename of the Google service account credential file
+#    default: 
+#    type_hint: Path/Filename of the Google service account credential file
   - name: project_name
     description: ID of the GCP project
     default:
