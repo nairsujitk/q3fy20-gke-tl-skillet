@@ -1,0 +1,54 @@
+# This is an example .meta-cnc.yaml file. This will allow Panhandler to consume this terraform project
+
+# this is the name of this skillet, should be unique within a given repository
+name: Deploying GKE cluster with Microservices APP and Twistlock Console and Defender for Demo
+
+# label should be a human readable label that conveys what this skillet will do
+label: gke
+
+# description is a longer more informative version of a label
+description: Deploying GKE cluster with Microservices APP and Twistlock Console and Defender for Demo
+
+# type instructs Panhandler how to consume this skillet
+type: terraform
+
+# extends allows you to include other skillets along with this one
+extends:
+
+# labels allow extensible configuration options per skillet type. For example, lables can be used to
+# group multiple skillets of the same type (pan-os skillets labeled as version: 9.0 for example)
+labels:
+  terraform_provider: google
+  collection:
+    - Public Cloud
+    - Deploy
+
+
+# Variables will be presented to the user via the Panhandler GUI. These values will then be passed to
+# the terraform binary as '--var' options, thus overriding any tfvars entries.
+# Variable names MUST match the names of the defined terraform variables
+variables:
+  - name: cred_file_name
+    description: Path/Filename of the Google service account credential file
+    default: 
+    type_hint: Path/Filename of the Google service account credential file
+  - name: project_name
+    description: ID of the GCP project
+    default:
+    type_hint: ID of the GCP project
+  - name: license
+    description: Twistlock license
+    default: 
+    type_hint: Twistlock license
+  - name: authcode
+    description: Twistlock Authcode
+    default: tw_9r3206kjz0gz12esgb8gwlpf5r0czvag
+    type_hint: Twistlock Authcode
+  - name: region
+    description: GCP Region where GKE cluster would be deployed
+    default: us-west1
+    type_hint: GCP Region where GKE cluster would be deployed
+  - name: region_zone
+    description: GCP Zone in the Region where GKE cluster would be deployed
+    default: us-west1-a
+    type_hint: GCP Zone in the Region where GKE cluster would be deployed
