@@ -137,8 +137,6 @@ resource "kubernetes_pod" "postgress_pod" {
       image = "postgres:latest"
 
       env {
-        name = "POSTGRES_USER"
-        value = "admin"
         name = "POSTGRES_PASSWORD"
         value = "admin123" 
       }
