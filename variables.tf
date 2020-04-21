@@ -15,9 +15,8 @@ variable "project_name" {
   default     = ""
 }
 
-variable "cred_file_name" {
-  description = "Path to credentials local file location"
-  default     = ""
+variable "gcp_credential" {
+  description = "Copy GCP .jason file data into terraform.tfvars file"
 }
 
 variable "password" {
