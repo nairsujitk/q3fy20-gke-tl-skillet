@@ -15,7 +15,7 @@ variable "project_name" {
   default     = ""
 }
 
-variable "gcp_credential" {
+variable "gcp_credentials" {
   description = "Copy GCP .jason file data into terraform.tfvars file"
 }
 
